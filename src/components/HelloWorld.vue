@@ -3,8 +3,9 @@
     <h1>{{ msg }}</h1>
     {{count}} <button @click="decrement()">-</button>
     <button v-on:click="increment()">+</button>
+
     <ul>
-      <li v-for="product in realProducts" :key="product.id">
+      <li v-for="product in realProducts.products" :key="product.id">
         {{ product.title }}
       </li>
     </ul>
@@ -23,7 +24,7 @@ export default class HelloWorld extends Vue {
   msg!: string
   // Class properties will be component data
   count = 0
-  products=this.setup()
+  products = this.setup()
   realProducts={}
   // Methods will be component methods
   increment () {
