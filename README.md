@@ -1,4 +1,5 @@
-# appts3class
+# vue3class
+Vue 3 TypeScript with vue class example 
 
 ## Project setup
 ```
@@ -22,4 +23,3 @@ npm run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-# vue3class
