@@ -18,7 +18,6 @@ import { FullItemInterface } from '@/composables/useTodoList'
 export default class TodoItem extends Vue {
     todo
     markComplete () {
-      console.log(typeof this.todo + ' type 1')
       this.todo.completed = !this.todo.completed
     }
 

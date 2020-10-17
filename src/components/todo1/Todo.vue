@@ -62,7 +62,6 @@ export default class Todo extends Vue {
   // Computed Value equivalent to todosList
   get todosList () {
     if (this.splitColor) {
-      console.log('aaa ' + JSON.stringify(this.todos))
       const halfList = this.todos.length / 2
       return [this.todos.slice(0, halfList), this.todos.slice(halfList)]
     }
