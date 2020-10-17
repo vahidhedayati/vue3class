@@ -16,7 +16,6 @@ export default function useApi<T> (
   const request: ApiRequest = async () => {
     const res = await fetch(url, options)
     const data = await res.json()
-    console.log('call')
     response.value = data
   }
 

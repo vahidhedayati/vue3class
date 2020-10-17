@@ -3,9 +3,8 @@
     <h1>{{ msg }}</h1>
     {{count}} <button @click="decrement()">-</button>
     <button v-on:click="increment()">+</button>
-
     <ul>
-      <li v-for="product in realProducts.products" :key="product.id">
+      <li v-for="product in products.products" :key="product.id">
         {{ product.title }}
       </li>
     </ul>
@@ -24,8 +23,16 @@ export default class HelloWorld extends Vue {
   msg!: string
   // Class properties will be component data
   count = 0
-  products = this.setup()
-  realProducts={}
+  products = {}
+  mounted () {
+    this.setup()
+  }
+
+  beforeRouteEnter (to: any, from: any, next: any) {
+    console.log('router enter')
+    next()
+  }
+
   // Methods will be component methods
   increment () {
     this.count++
@@ -36,8 +43,7 @@ export default class HelloWorld extends Vue {
   }
 
   async setup () {
-    console.log('awaiting')
-    this.realProducts = await useProducts()
+    this.products = await useProducts()
   }
 }
 </script>
