@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router'
 import Home from '../views/Home.vue'
 import ModusProducts from '@/components/ModusProducts.vue'
-
+import VuexTodo from '@/views/VuexTodo.vue'
 const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
@@ -12,6 +12,11 @@ const routes: Array<RouteRecordRaw> = [
     path: '/modus',
     name: 'ModusProducts',
     component: ModusProducts
+  },
+  {
+    path: '/vuextodo',
+    name: 'VuexTodo',
+    component: VuexTodo
   },
   {
     path: '/about',

@@ -4,14 +4,23 @@ Just learning new stuff along the way and took on the work already done here
 
 #### Part 1: Vue 3 example hooks with slight modification:
  
-After watcheing [Vue 3 Hooks and Type Safety with TypeScript](https://www.youtube.com/watch?v=aJdi-uEKYAc) 
-for  code base [Grgur Grisogono: Vue3-example-hooks-ts](https://github.com/moduslabs/vue3-example-hooks-ts).
+After watching [Vue 3 Hooks and Type Safety with TypeScript](https://www.youtube.com/watch?v=aJdi-uEKYAc) 
+for [Grgur Grisogono: Vue3-example-hooks-ts](https://github.com/moduslabs/vue3-example-hooks-ts). 
+ above example has been changed to work within a class feature enabled app.
 
-This is similar to above project, slight modifications to work with Vue 3 TypeScript with feature class enabled.
+#### Part 2: Vue Todo List converted from vanilla Vue 3 non Type Script to TypeScript with class feature enabled 
+[Vue 3 Todo Project converted to class](https://github.com/vahidhedayati/vue3-todolist) 
+converted & checked in as  
+[Part 2 TodoList added](https://github.com/vahidhedayati/vue3class/commit/57e596713dcca302d111b10dd3dfd4a04b00dfda)
 
-#### Part 2: [Vue 3 Todo Project converted to class](https://github.com/vahidhedayati/vue3-todolist)
-In part 2 and as part of this code change, the files from 
-[vue3-todoList](https://github.com/vahidhedayati/vue3-todolist) converted to typescript with class support
+
+##### Part 3: Vuex TypeScript todo app added
+
+[Justin Brooks has uploaded vuex-typescript-todoapp](https://github.com/jsbroks/vuex-typescript-todoapp) 
+uses vuex as central store. The code has been slightly modified to work with a vue 3 TypeScript 
+with class feature enabled.
+
+ 
 ## Project setup
 ```
 npm install

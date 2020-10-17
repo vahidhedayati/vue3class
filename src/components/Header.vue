@@ -9,18 +9,11 @@
         <li><router-link to="/">Home</router-link> </li>
         <li><router-link to="/about">About</router-link></li>
         <li><router-link to="/modus">Modus Products</router-link></li>
+        <li class="btn btn-blue"><router-link to="/vuextodo">Vuex Todo</router-link></li>
       </ul>
     </nav>
   </header>
 </template>
-
-<script lang="ts">
-import { Vue } from 'vue-class-component'
-
-export default class Header extends Vue {
-}
-</script>
-
 <style scoped>
 .header {
   border: solid 1px #000;
