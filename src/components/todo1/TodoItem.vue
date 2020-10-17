@@ -6,22 +6,28 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { Vue, Options } from 'vue-class-component'
 import { FullItemInterface } from '@/composables/useTodoList'
-
+/*
+export interface FullItemInterface2 {
+  id: number;
+  title: string;
+  completed: boolean;
+}
+*/
 @Options({
   props: {
-    todo: FullItemInterface
+    todo: undefined
   }
 })
 export default class TodoItem extends Vue {
-    todo
+    todo!: FullItemInterface
     markComplete () {
       this.todo.completed = !this.todo.completed
     }
 
-    deleteFromList (id) {
+    deleteFromList (id: number) {
       this.$emit('del-todo', id)
     }
 }
