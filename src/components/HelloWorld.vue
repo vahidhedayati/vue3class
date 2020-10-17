@@ -3,17 +3,11 @@
     <h1>{{ msg }}</h1>
     {{count}} <button @click="decrement()">-</button>
     <button v-on:click="increment()">+</button>
-    <ul>
-      <li v-for="product in products.products" :key="product.id">
-        {{ product.title }}
-      </li>
-    </ul>
   </div>
 </template>
 
 <script lang="ts">
 import { Options, Vue } from 'vue-class-component'
-import useProducts from '../composables/products'
 @Options({
   props: {
     msg: String
@@ -23,15 +17,6 @@ export default class HelloWorld extends Vue {
   msg!: string
   // Class properties will be component data
   count = 0
-  products = {}
-  mounted () {
-    this.setup()
-  }
-
-  beforeRouteEnter (to: any, from: any, next: any) {
-    console.log('router enter')
-    next()
-  }
 
   // Methods will be component methods
   increment () {
@@ -40,10 +25,6 @@ export default class HelloWorld extends Vue {
 
   decrement () {
     this.count--
-  }
-
-  async setup () {
-    this.products = await useProducts()
   }
 }
 </script>
