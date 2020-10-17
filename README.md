@@ -17,8 +17,8 @@ converted & checked in as
 ##### Part 3: Vuex TypeScript todo app added
 
 [Justin Brooks has uploaded vuex-typescript-todoapp](https://github.com/jsbroks/vuex-typescript-todoapp) 
-uses vuex as central store. The code has been slightly modified to work with a vue 3 TypeScript 
-with class feature enabled.
+uses vuex as central store. The code has been slightly modified to work with class feature enabled. 
+[Changes checked in as part 3](https://github.com/vahidhedayati/vue3class/commit/f85cb072b0c8c717059442450aa9e7bcabfc4ff9)  
 
  
 ## Project setup
