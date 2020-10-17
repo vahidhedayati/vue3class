@@ -7,7 +7,7 @@ export interface TodoItemInterface {
   completed: boolean;
 }
 export interface FullItemInterface {
-  id: any,
+  id: number;
   title: string;
   completed: boolean;
 }
@@ -23,7 +23,10 @@ export function useTodoList () {
   watchEffect(() => {
     if (shouldFetch.value) {
       instance.get('?_limit=25')
-        .then(res => todos.value = res.data)
+        .then(res => {
+          todos.value = res.data
+          return res
+        })
         .catch(err => console.log(err))
     }
   })
@@ -41,11 +44,7 @@ export function useTodoList () {
   function addToList (newTodo: TodoItemInterface) {
     console.log(typeof newTodo)
     const { title, completed } = newTodo
-
-    instance.post ('', {
-      title,
-      completed
-    })
+    instance.post('/', { title, completed })
       .then(res => todos.value.push(res.data))
       .catch(err => console.log(err))
   }
@@ -55,5 +54,5 @@ export function useTodoList () {
     shouldFetch,
     deleteFromList,
     addToList
-  };
+  }
 }
